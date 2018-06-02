@@ -5,45 +5,40 @@ operations are performed parallel in the number of cores selected when
 compiling.
 
 
-## COMPILING INSTRUCTIONS       
+## COMPILING INSTRUCTIONS
 
-In linux terminal: 
+In linux terminal:
 
 1.- Execute Makefile in main folder to compile the serial and parallel programs 
-and to compile all the functions and make the lib-simple library	
+and to compile all the functions and make the lib-simple library
+`$ make all`
 
-`$ make all`  
+2.-  To execute serial_main in linux terminal<br />
+//automatic execution with kappa=0.1 and 50 iters<br />
+`$ ./serial_main  `<br />
+// Passing parameters<br />
+`$ ./serial_main kappa iters infile outfile `<br />
 
-2.-  To execute serial_main in linux terminal  
+3.-  To execute serial_main in abel<br />
+//automatic execution with kappa=0.1 and 50 iters<br />
+`$ sbatch serial_main.scp `<br />
+// Passing parameters<br />
+`$ sbatch serial_main.scp kappa iters infile outfile`<br />
 
-	//automatic execution with kappa=0.1 and 50 iters  
-	`$ ./serial_main  `  
-	// Passing parameters  
-	`$ ./serial_main kappa iters infile outfile `  
-
-3.-  To execute serial_main in abel  
-
-	//automatic execution with kappa=0.1 and 50 iters  
-	`$ sbatch serial_main.scp `  
-	// Passing parameters  
-   	`$ sbatch serial_main.scp kappa iters infile outfile`   
-
-4.-  To execute parallel_main in linux terminal  
-
-//automatic execution  kappa=0.1 and 50 iters<br />  
+4.-  To execute parallel_main in linux terminal<br />
+//automatic execution  kappa=0.1 and 50 iters<br />
 `$ mpirun -n nr_processors ./parallel_main `<br />
 //Passing parameters<br />
 `$ mpirun -n nr_processors ./parallel_main kappa iters infile outfile`<br />
 
 
-5.-  To execute parallel_main in abel  
-
-//automatic execution with kappa=0.1 and 50 iters<br /> 
+5.-  To execute parallel_main in abel<br />
+//automatic execution with kappa=0.1 and 50 iters<br />
 `$ sbatch parallel_main.scp`<br />
 // Passing parameters<br />
-`$ sbatch parallel_main.scp kappa iters infile outfile`<br /> 
+`$ sbatch parallel_main.scp kappa iters infile outfile`<br />
 
-## PACKAGE CONTENT        
+## PACKAGE CONTENT
 
 **Makefile: **
 Compiles the serial and parallel programs and to compile all the functions and make  the lib-simple library, remove the objects and reports from execution on request and compress all for delivery.
@@ -68,13 +63,13 @@ A set of functions to work on jpeg images, we will use import_JPEG_file and expo
 **Readme.txt:**
 this
 
-## PECULIARITIES          
+## PECULIARITIES
 
 In the assignment text it is suggested the use of a whole image  and a sub image for each process. I have used a whole char array and a partial array for each process. Building this partial images from the corresponding portion of image_chars. The image is divided horizontally trying to assign each processor similar amount of information.
 The first and last process take one extra row to allow computation in the border row. This last computed row is send to the neighbor processes. The processes in the middle take one extra upper and downer row for the same reason, and send the two last rows  computed to the neighbor processes.
 After each processor has finished the computation converts the image to a char array and sends it to the first process where the array is gathered and the whole denoised image built back.
  
 
-## PROGRAM   STATUS       
+## PROGRAM   STATUS
 
 After testing on abel with one core and 8 processors and the scripts provided, both  serial and parallel version works with and without passing arguments, the level of  detail in the images seems to concord with the values given.
