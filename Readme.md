@@ -17,10 +17,10 @@ and to compile all the functions and make the lib-simple library
 
 
 2.-  To execute serial_main in linux terminal
-	//automatic execution with kappa=0.1 and 50 iters[========]
-	`$ ./serial_main  `[========]
-	// Passing parameters[========]
-	`$ ./serial_main kappa iters infile outfile `[========]
+	//automatic execution with kappa=0.1 and 50 iters  
+	`$ ./serial_main  `  
+	// Passing parameters  
+	`$ ./serial_main kappa iters infile outfile `  
 
 
 3.-  To execute serial_main in abel
