@@ -9,9 +9,8 @@ compiling.
 
 In linux terminal:
 
-1.- Execute Makefile in main folder to compile the serial and parallel programs 
-and to compile all the functions and make the lib-simple library
-`$ make all`
+1.- Execute Makefile in main folder to compile the serial and parallel programs and to compile all the functions and make the lib-simple library<br />
+`$ make all`<br />
 
 2.-  To execute serial_main in linux terminal<br />
 //automatic execution with kappa=0.1 and 50 iters<br />
