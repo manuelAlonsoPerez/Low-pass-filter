@@ -30,18 +30,18 @@ and to compile all the functions and make the lib-simple library
 
 4.-  To execute parallel_main in linux terminal  
 
-	//automatic execution  kappa=0.1 and 50 iters  
-	`$ mpirun -n nr_processors ./parallel_main `   
-	//Passing parameters  
-	`$ mpirun -n nr_processors ./parallel_main kappa iters infile outfile`   
+//automatic execution  kappa=0.1 and 50 iters<br />  
+`$ mpirun -n nr_processors ./parallel_main `<br />
+//Passing parameters<br />
+`$ mpirun -n nr_processors ./parallel_main kappa iters infile outfile`<br />
 
 
 5.-  To execute parallel_main in abel  
 
-//automatic execution with kappa=0.1 and 50 iters  
-`$ sbatch parallel_main.scp`  
-// Passing parameters  
-`$ sbatch parallel_main.scp kappa iters infile outfile` 
+//automatic execution with kappa=0.1 and 50 iters<br /> 
+`$ sbatch parallel_main.scp`<br />
+// Passing parameters<br />
+`$ sbatch parallel_main.scp kappa iters infile outfile`<br /> 
 
 ## PACKAGE CONTENT        
 
