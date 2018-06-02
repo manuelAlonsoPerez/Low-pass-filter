@@ -71,5 +71,4 @@ After each processor has finished the computation converts the image to a char a
 
 ## PROGRAM   STATUS       
 
-
 After testing on abel with one core and 8 processors and the scripts provided, both  serial and parallel version works with and without passing arguments, the level of  detail in the images seems to concord with the values given.
