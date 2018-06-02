@@ -22,12 +22,14 @@ and to compile all the functions and make the lib-simple library
 	`$ ./serial_main kappa iters infile outfile `  
 
 3.-  To execute serial_main in abel  
+
 	//automatic execution with kappa=0.1 and 50 iters  
 	`$ sbatch serial_main.scp `  
-	// Passing parameters
+	// Passing parameters  
    	`$ sbatch serial_main.scp kappa iters infile outfile`   
 
 4.-  To execute parallel_main in linux terminal  
+
 	//automatic execution  kappa=0.1 and 50 iters  
 	`$ mpirun -n nr_processors ./parallel_main `   
 	//Passing parameters  
@@ -35,6 +37,7 @@ and to compile all the functions and make the lib-simple library
 
 
 5.-  To execute parallel_main in abel  
+
 //automatic execution with kappa=0.1 and 50 iters  
 `$ sbatch parallel_main.scp`  
 // Passing parameters  
