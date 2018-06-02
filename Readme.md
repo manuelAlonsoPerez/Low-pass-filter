@@ -12,30 +12,33 @@ In linux terminal:
 1.- Execute Makefile in main folder to compile the serial and parallel programs 
 and to compile all the functions and make the lib-simple library	
 
+`$ make all`  
 
-`$ make all`
+2.-  To execute serial_main in linux terminal  
 
-
-2.-  To execute serial_main in linux terminal
 	//automatic execution with kappa=0.1 and 50 iters  
 	`$ ./serial_main  `  
 	// Passing parameters  
 	`$ ./serial_main kappa iters infile outfile `  
 
+3.-  To execute serial_main in abel  
+	//automatic execution with kappa=0.1 and 50 iters  
+	`$ sbatch serial_main.scp `  
+	// Passing parameters
+   	`$ sbatch serial_main.scp kappa iters infile outfile`   
 
-3.-  To execute serial_main in abel
-	`$ sbatch serial_main.scp ` //automatic execution with kappa=0.1 and 50 iters
-   `$ sbatch serial_main.scp kappa iters infile outfile` // Passing parameters
+4.-  To execute parallel_main in linux terminal  
+	//automatic execution  kappa=0.1 and 50 iters  
+	`$ mpirun -n nr_processors ./parallel_main `   
+	//Passing parameters  
+	`$ mpirun -n nr_processors ./parallel_main kappa iters infile outfile`   
 
 
-4.-  To execute parallel_main in linux terminal
-	`$ mpirun -n nr_processors ./parallel_main ` //automatic execution  kappa=0.1 and 50 iters
-	`$ mpirun -n nr_processors ./parallel_main kappa iters infile outfile` //Passing parameters
-
-
-5.-  To execute parallel_main in abel
-`$ sbatch parallel_main.scp`  //automatic execution with kappa=0.1 and 50 iters
-`$ sbatch parallel_main.scp kappa iters infile outfile` // Passing parameters
+5.-  To execute parallel_main in abel  
+//automatic execution with kappa=0.1 and 50 iters  
+`$ sbatch parallel_main.scp`  
+// Passing parameters  
+`$ sbatch parallel_main.scp kappa iters infile outfile` 
 
 ## PACKAGE CONTENT        
 
