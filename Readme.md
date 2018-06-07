@@ -1,6 +1,6 @@
 ## PROJECT DESCRIPTION
 
-Noise removing of an image preforming a linnear lowpass filter, the filter 
+Noise removing of an image preforming a linear lowpass filter, the filter 
 operations are performed parallel in the number of cores selected when 
 compiling.
 
