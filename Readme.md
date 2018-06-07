@@ -1,8 +1,7 @@
 ## PROJECT DESCRIPTION
 
-Noise removing of an image preforming a linear lowpass filter, the filter 
-operations are performed parallel in the number of cores selected when 
-compiling.
+Noise removing of an image preforming isotropic diffussion by applying a cross-shaped weighted filter, the filter 
+operations are performed parallel in the number of cores selected when compiling.
 
 
 ## COMPILING INSTRUCTIONS
